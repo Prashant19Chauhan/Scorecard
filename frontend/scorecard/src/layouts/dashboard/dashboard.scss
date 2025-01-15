@@ -1,0 +1,118 @@
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f4f7fc;
+    min-height: 100vh;
+    box-sizing: border-box;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+  }
+  
+  .progress {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px; /* Limit the max-width */
+  }
+  
+  .progressInNumber {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 100%;
+    height: 180px; /* Slightly increased height for better visibility */
+  }
+  
+  .progressInNumber .totalSubject,
+  .progressInNumber .totalTask,
+  .progressInNumber .finishedTask,
+  .progressInNumber .subjectFinished {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+  
+  .progressInNumber .totalSubject:hover,
+  .progressInNumber .totalTask:hover,
+  .progressInNumber .finishedTask:hover,
+  .progressInNumber .subjectFinished:hover {
+    transform: translateY(-5px); /* Hover effect */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .progressInNumber .number {
+    font-size: 36px;
+    font-weight: bold;
+    color: #3498db;
+  }
+  
+  .progressInNumber h5 {
+    font-size: 16px;
+    color: #7f8c8d;
+    margin-top: 8px;
+  }
+  
+  .progressDaysCompleted {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    width: 95%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .progressDaysCompleted h3 {
+    font-size: 1.6rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+  }
+  
+  @media (max-width: 768px) {
+    .progress {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .progressInNumber {
+      grid-template-columns: 1fr 1fr; /* 2 columns on medium screens */
+    }
+  
+    .progressDaysCompleted {
+      width: 100%;
+      height: auto;
+      margin-top: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .dashboard {
+      padding: 10px;
+    }
+  
+    .progressInNumber {
+      grid-template-columns: 1fr; /* 1 column on smaller screens */
+    }
+  
+    .progressDaysCompleted {
+      margin-top: 20px;
+      height: auto; /* Adjust height for small screens */
+    }
+  
+    h2 {
+      font-size: 1.8rem; /* Adjust font size for mobile */
+    }
+  }
+  

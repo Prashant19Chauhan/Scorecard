@@ -1,0 +1,155 @@
+// Variables
+$primary-color: #4caf50; // Primary color
+$secondary-color: #2c2c2e; // Secondary background
+$text-color: #ffffff; // Text color
+$banner-color: #1a1a1d; // Side banner background
+
+// Login Page Styles
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: $secondary-color;
+
+  .loginPage {
+    display: flex;
+    width: 80%;
+    max-width: 1000px;
+    height: 80%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+
+    .sideBanner {
+      flex: 1;
+      background-color: $banner-color;
+      background-image: url('https://via.placeholder.com/500'); // Replace with your image URL
+      background-size: cover;
+      background-position: center;
+    }
+
+    .loginForm {
+      flex: 1.5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $secondary-color;
+
+      .login-container {
+        width: 100%;
+        max-width: 400px;
+        padding: 20px;
+        background-color: #3a3a3c;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+        .login-form {
+          text-align: center;
+
+          h2 {
+            color: $text-color;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+          }
+
+          form {
+            .form-group {
+              width: 95%;
+              margin-bottom: 20px;
+              text-align: left;
+
+              label {
+                display: block;
+                color: #d1d1d6;
+                margin-bottom: 5px;
+                font-size: 0.9rem;
+              }
+
+              input {
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #d1d1d6;
+                border-radius: 4px;
+                background-color: #2c2c2e;
+                color: $text-color;
+                font-size: 1rem;
+
+                &:focus {
+                  outline: none;
+                  border-color: $primary-color;
+                  box-shadow: 0 0 4px rgba(76, 175, 80, 0.5);
+                }
+              }
+            }
+
+            .btn-login {
+              width: 100%;
+              padding: 10px;
+              border: none;
+              border-radius: 4px;
+              background-color: $primary-color;
+              color: $text-color;
+              font-size: 1rem;
+              font-weight: bold;
+              cursor: pointer;
+              transition: background-color 0.3s ease;
+
+              &:hover {
+                background-color: darken($primary-color, 10%);
+              }
+            }
+          }
+
+          .login-footer {
+            margin-top: 20px;
+
+            p {
+              color: #d1d1d6;
+              font-size: 0.9rem;
+
+              a {
+                color: $primary-color;
+                text-decoration: none;
+
+                &:hover {
+                  text-decoration: underline;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .loginPage {
+    flex-direction: column;
+    height: auto;
+
+    .sideBanner {
+      height: 200px;
+    }
+
+    .loginForm {
+      .login-container {
+        padding: 15px;
+      }
+
+      .login-form h2 {
+        font-size: 1.5rem;
+      }
+
+      .login-form form .form-group input {
+        font-size: 0.9rem;
+      }
+
+      .login-form form .btn-login {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}

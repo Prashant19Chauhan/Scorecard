@@ -1,0 +1,95 @@
+.InfoForRoadmapPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background-color: #F7F9FC; // Light background
+  color: #333333; // Dark text color
+  min-height: 100vh;
+
+  .InfoHeader {
+    text-align: center;
+    margin-bottom: 1.5rem;
+
+    h3 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+      color: #2C3E50; // Primary header color
+    }
+
+    .divider {
+      width: 60%;
+      height: 4px;
+      background: linear-gradient(90deg, #FF6F61, #FFD700, #4CAF50);
+      border-radius: 2px;
+      margin: 0.5rem auto;
+    }
+  }
+
+  .InfoContainer {
+    width: 100%;
+    max-width: 600px;
+    background-color: #FFFFFF; // White background
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid #E0E0E0;
+
+    .InfoField {
+      display: flex;
+      flex-direction: column;
+
+      form {
+        width: 97%;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+
+        label {
+          font-size: 1rem;
+          font-weight: 500;
+          color: #555555;
+        }
+
+        input[type='text'],
+        input[type='number'] {
+          width: 100%;
+          padding: 0.8rem;
+          border: 2px solid #CCCCCC;
+          border-radius: 8px;
+          background-color: #FAFAFA;
+          color: #333333;
+          font-size: 1rem;
+          transition: border-color 0.3s;
+
+          &:focus {
+            outline: none;
+            border-color: #FF6F61; // Highlight on focus
+          }
+        }
+
+        input[type='radio'] {
+          margin-right: 0.5rem;
+        }
+
+        button {
+          padding: 0.8rem;
+          background: linear-gradient(90deg, #FF6F61, #FFD700, #4CAF50);
+          color: #FFFFFF;
+          border: none;
+          border-radius: 8px;
+          font-size: 1rem;
+          font-weight: bold;
+          cursor: pointer;
+          transition: transform 0.2s;
+
+          &:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+          }
+        }
+      }
+    }
+  }
+}

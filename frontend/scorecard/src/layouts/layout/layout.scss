@@ -1,0 +1,21 @@
+.layout{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.sidebarLayout{
+    width: 30%;
+    position: fixed;
+   z-index: 3;
+    left: 0px;
+}
+
+.screenLayout{
+    position: absolute;
+    left:23%;
+    padding: 50px;
+    width: 70%;
+}

@@ -1,0 +1,21 @@
+.streakcal{
+    display: flex;
+    gap: 20px;
+    overflow: scroll;
+}
+.streakmonthsec{
+    text-align: center;
+}
+
+.streakmonthcal{
+    display: grid;
+    grid-template-columns: repeat(6, 0fr);
+    grid-template-rows: repeat(6, 0fr);
+}
+
+.dayNumber{
+    width: 20px;
+    height: 20px;
+    background-color: green;
+    margin: 3px;
+}

@@ -1,0 +1,134 @@
+// taskpage.scss
+
+.taskpage {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+  
+    .taskpageheader {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+  
+      .taskpageheading h2 {
+        font-size: 24px;
+        font-weight: bold;
+        color: #333;
+      }
+  
+      .NewSubjectBtn button {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        font-size: 14px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+  
+        &:hover {
+          background-color: #45a049;
+        }
+      }
+    }
+  
+    .divider {
+      height: 1px;
+      background-color: #ddd;
+      margin: 20px 0;
+    }
+  
+    .taskshow {
+      display: flex;
+      gap: 20px;
+  
+      .ToDoTask,
+      .CompletedTask,
+      .workInProgress,
+      .Pendingtask {
+        background-color: #fff;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        width: calc(50% - 20px);
+  
+        .ToDoTaskBar {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 15px;
+  
+          h3 {
+            font-size: 18px;
+            color: #333;
+          }
+  
+          button {
+            background-color: #2196F3;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+  
+            &:hover {
+              background-color: #1976d2;
+            }
+          }
+        }
+  
+        .TaskCardContainer {
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+  
+          .TaskCard {
+            background-color: #fafafa;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+  
+            img {
+              width: 100px;
+              height: 100px;
+              object-fit: cover;
+              border-radius: 50%;
+              margin-bottom: 10px;
+            }
+  
+            h5 {
+              font-size: 16px;
+              font-weight: bold;
+              margin: 10px 0;
+            }
+  
+            p {
+              font-size: 14px;
+              color: #555;
+              text-align: center;
+              margin-bottom: 15px;
+            }
+  
+            button {
+              background-color: #FF9800;
+              color: white;
+              border: none;
+              padding: 8px 12px;
+              font-size: 14px;
+              cursor: pointer;
+              transition: background-color 0.3s;
+  
+              &:hover {
+                background-color: #fb8c00;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
